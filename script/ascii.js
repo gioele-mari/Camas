@@ -6,7 +6,7 @@ var ascii = (function() {
 		// Heavily modified by Andrei Gheorghe (http://github.com/idevelop)
 
 		var characters = (" .,:;i1tfLCG08@").split("");
-
+        
 		var context = canvas.getContext("2d");
 		var canvasWidth = canvas.width;
 		var canvasHeight = canvas.height;

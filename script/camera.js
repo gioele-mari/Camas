@@ -21,6 +21,8 @@ var camera = (function() {
 		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
 		window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
 
+        
+        console.log(navigator)
 		if (navigator.getUserMedia) {
 			navigator.getUserMedia({
 				video: true,
@@ -51,7 +53,7 @@ var camera = (function() {
 		// mirror video
 		if (options.mirror) {
 			context.translate(canvas.width, 0);
-			context.scale(-1, 1);
+			context.scale(-1.3, 1.3);
 		}
 	}
 

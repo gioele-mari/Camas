@@ -9,16 +9,18 @@
 (function() {
 	var asciiContainer = document.getElementById("ascii");
 	var capturing = false;
-
+    
 	camera.init({
-		width: 250,
-		height: 125,
+		// width: 250,
+		// height: 125,
+        width: 200,
+        height: 150,
 		fps: 240,
 		mirror: true,
 
 		onFrame: function(canvas) {
-			ascii.fromCanvas(canvas, {
-				// contrast: 128,
+    		ascii.fromCanvas(canvas, {
+				contrast: 160,
 				callback: function(asciiString) {
 					asciiContainer.innerHTML = asciiString;
 				}
@@ -27,7 +29,7 @@
 
 		onSuccess: function() {
 			document.getElementById("info").style.display = "none";
-
+           
 			const button = document.getElementById("button");
 			button.style.display = "block";
 			button.onclick = function() {
@@ -36,7 +38,7 @@
 					button.innerText = 'resume';
 				} else {
 					camera.start();
-					button.innerText = 'pause';
+					button.innerText = 'Cheese!!!';
 				}
 				capturing = !capturing;
 			};
